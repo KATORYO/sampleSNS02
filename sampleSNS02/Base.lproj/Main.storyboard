@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sampleSNS02" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7BN-ZS-cWg">
+                                <rect key="frame" x="65" y="141" width="245" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xTg-we-xyk" appends="YES" id="1qz-Ub-uKv"/>
+                                    <outletCollection property="gestureRecognizers" destination="9Pg-Ut-HXi" appends="YES" id="0xR-il-sNN"/>
+                                </connections>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dog" translatesAutoresizingMaskIntoConstraints="NO" id="lMa-zg-HhV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="F8i-WA-nC5" appends="YES" id="rkF-Sa-leW"/>
+                                </connections>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrQ-uN-0GC">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="EjR-mh-Cec">
+                                        <connections>
+                                            <action selector="tapAction:" destination="BYZ-38-t0r" id="UfP-Xz-mCY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lMa-zg-HhV" firstAttribute="trailing" secondItem="VrQ-uN-0GC" secondAttribute="trailing" id="0SN-OX-bpQ"/>
+                            <constraint firstItem="lMa-zg-HhV" firstAttribute="leading" secondItem="VrQ-uN-0GC" secondAttribute="leading" id="5Fw-B0-pZ3"/>
+                            <constraint firstAttribute="bottom" secondItem="7BN-ZS-cWg" secondAttribute="bottom" constant="266" id="Oji-Ye-3vS"/>
+                            <constraint firstItem="lMa-zg-HhV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UTO-Nh-eDP"/>
+                            <constraint firstItem="7BN-ZS-cWg" firstAttribute="centerX" secondItem="VrQ-uN-0GC" secondAttribute="centerX" id="Z0R-tU-72c"/>
+                            <constraint firstItem="lMa-zg-HhV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="f5U-uf-Aoc"/>
+                            <constraint firstItem="lMa-zg-HhV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fVU-qf-bTD"/>
+                            <constraint firstItem="VrQ-uN-0GC" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="ipl-n5-zXt"/>
+                            <constraint firstItem="7BN-ZS-cWg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="49" id="kzN-SC-SOI"/>
+                            <constraint firstItem="7BN-ZS-cWg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="121" id="loD-iF-q2j"/>
+                            <constraint firstAttribute="trailing" secondItem="lMa-zg-HhV" secondAttribute="trailing" id="u3v-CI-wcf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dogImageView" destination="lMa-zg-HhV" id="V9B-d9-7af"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xTg-we-xyk">
+                    <connections>
+                        <action selector="myTop:" destination="BYZ-38-t0r" id="orn-QW-IA4"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="9Pg-Ut-HXi">
+                    <connections>
+                        <action selector="mySwipe:" destination="BYZ-38-t0r" id="ECe-hl-IWy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="F8i-WA-nC5"/>
+            </objects>
+            <point key="canvasLocation" x="-103.2" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Dog" width="682" height="1021"/>
+    </resources>
+</document>
